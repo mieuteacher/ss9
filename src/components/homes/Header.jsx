@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+    const productStore = useSelector(store => store.productStore)
     const navigate = useNavigate()
     const [login, setLogin] = useState(true)
     return (
@@ -40,6 +42,7 @@ export default function Header() {
                             <Link to={'/register'}>đăng ký</Link>
                         </div>
                     }
+                    cart {productStore.count}
                 </div>
             </section>
         </header>
