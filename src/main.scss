@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
 }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&family=Tilt+Prism&display=swap');
 $fontSlogan: 'Saira', sans-serif;
 
@@ -40,9 +42,9 @@ $maxW: 1440px;
                         width: 185px;
                         text-align: center;
                         position: absolute;
-                        bottom: 0;
+                        bottom: -2px;
                         right: 0;
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                         background-color: white;
                         text-transform: lowercase;
                         color: grey;
@@ -54,9 +56,47 @@ $maxW: 1440px;
             .mid_content {
                 width: 50%;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+                font-family: $fontSlogan;
             }
             .right_content {
                 height: 100%;
+                .content_user {
+                    #dropdown-basic {
+                        background-color: unset !important;
+                        border: unset !important;
+                        .title_hello {
+                            color: grey;
+                        }
+                        .user_avatar {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            border: 1px solid grey;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+                .content_member {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-family: $fontSlogan;
+                    color: blue;
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
         position: sticky;
